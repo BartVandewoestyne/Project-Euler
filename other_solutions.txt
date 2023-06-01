@@ -1,2 +1,7 @@
 Other people's solutions can be found at:
+
+C++:
   https://github.com/Ayenem/Project-Euler/tree/main/src
+
+Python:
+  https://euler.beerbaronbill.com/en/latest/index.html
