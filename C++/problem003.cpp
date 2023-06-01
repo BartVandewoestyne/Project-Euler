@@ -3,17 +3,17 @@
  *   https://www.tutorialspoint.com/prime-factor-in-cplusplus-program
  */
 
-#include <iostream>
 #include <cmath>
+#include <iostream>
 
-long int getLargestPrimeFactor(long int n)
+auto getLargestPrimeFactor(int64_t n) -> int64_t
 {
     while (n % 2 == 0)
     {
        n = n / 2;
     }
 
-   for (long int i = 3; i <= std::sqrt(n); i += 2)
+   for (int64_t i = 3; i <= std::sqrt(static_cast<long double>(n)); i += 2)
    {
       while (n % i == 0)
       {
@@ -23,9 +23,9 @@ long int getLargestPrimeFactor(long int n)
    return n;
 }
 
-long int problem003()
+auto problem003() -> int64_t
 {
-   const auto n = 600851475143;
-   const auto largestPrimeFactor = getLargestPrimeFactor(n);
+   const auto number = 600851475143;
+   const auto largestPrimeFactor = getLargestPrimeFactor(number);
    return largestPrimeFactor;
 }
