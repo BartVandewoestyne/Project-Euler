@@ -1,18 +1,20 @@
 #include <iostream>
 #include <vector>
 
-std::vector<int> to_digits(int number)
+auto to_digits(int number) -> std::vector<int>
 {
+    constexpr auto base10 = 10;
+    
     std::vector<int> digits;
     while (number > 0)
     {
-        digits.push_back(number % 10);
-        number /= 10;
+        digits.push_back(number % base10);
+        number /= base10;
     }
     return digits;
 }
 
-bool is_palindromic(int number)
+auto is_palindromic(int number) -> bool
 {
     const auto digits = to_digits(number);
     auto is_palindromic = true;
@@ -28,21 +30,22 @@ bool is_palindromic(int number)
     return is_palindromic;
 }
 
-int problem004()
+auto problem004() -> int
 {
+    constexpr auto begin = 100;
+    constexpr auto end = 1000;
+
     auto largest_palindrome = -1;
     auto winning_i = -1;
     auto winning_j = -1;
-    for (int i = 100; i < 1000; ++i)
+    for (int i = begin; i < end; ++i)
     {
-        for (int j = 100; j < 1000; ++j)
+        for (int j = begin; j < end; ++j)
         {
             const auto product = i*j;
             if (is_palindromic(product) && (product > largest_palindrome) )
             {
                 largest_palindrome = product;
-                winning_i = i;
-                winning_j = j;
             }
         }
     }
