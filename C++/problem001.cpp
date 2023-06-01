@@ -2,12 +2,16 @@
 
 #include <iostream>
 
-int problem001()
+auto problem001() -> int
 {
-    int sum = 0;
-    for (int i = 1; i < 1000; ++i)
+    constexpr auto upper_limit = 1000;
+    constexpr auto number1 = 3;
+    constexpr auto number2 = 5;
+
+    auto sum = 0;
+    for (auto i = 1; i < upper_limit; ++i)
     {
-        if ( (i % 3 == 0) || (i % 5 == 0) )
+        if ( (i % number1 == 0) || (i % number2 == 0) )
         {
             sum += i;
         }
