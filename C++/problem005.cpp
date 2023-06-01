@@ -31,8 +31,8 @@ int find_number(int n)
     return i;
 }
 
-int main()  
+int problem005()
 {
     const auto n = find_number(20);
-    std::cout << n << std::endl;
+    return n;
 }

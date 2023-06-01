@@ -1,6 +1,6 @@
 #include <iostream>
 
-int main()
+int problem002()
 {
     auto sum = 0;
     auto current = 1;
@@ -15,5 +15,5 @@ int main()
         current = next;
         next = temp;
     }
-    std::cout << sum << std::endl;
+    return sum;
 }

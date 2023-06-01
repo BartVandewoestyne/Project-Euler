@@ -23,9 +23,9 @@ long int getLargestPrimeFactor(long int n)
    return n;
 }
 
-int main() {
+long int problem003()
+{
    const auto n = 600851475143;
    const auto largestPrimeFactor = getLargestPrimeFactor(n);
-   std::cout << largestPrimeFactor << std::endl;
-   return 0;
+   return largestPrimeFactor;
 }

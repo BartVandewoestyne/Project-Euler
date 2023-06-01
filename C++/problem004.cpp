@@ -28,7 +28,7 @@ bool is_palindromic(int number)
     return is_palindromic;
 }
 
-int main()
+int problem004()
 {
     auto largest_palindrome = -1;
     auto winning_i = -1;
@@ -46,5 +46,5 @@ int main()
             }
         }
     }
-    std::cout << "largest palindrome: " << winning_i << " * " << winning_j << " = " << largest_palindrome << std::endl;
+    return largest_palindrome;
 }
