@@ -7,7 +7,7 @@
 
 #include <iostream>  
 
-bool works(int i, int n)
+auto works(int i, int n) -> bool
 {
     bool result = true;
     for (int j = 1; j <= n; ++j)
@@ -20,10 +20,9 @@ bool works(int i, int n)
     return result;
 }
 
-int find_number(int n)
+auto find_number(int n) -> int
 {
     int i = 1;
-    bool found = false;
     while (!works(i, n))
     {
         ++i;
@@ -31,8 +30,8 @@ int find_number(int n)
     return i;
 }
 
-int problem005()
+auto problem005() -> int
 {
-    const auto n = find_number(20);
-    return n;
+    const auto number = find_number(20);
+    return number;
 }
