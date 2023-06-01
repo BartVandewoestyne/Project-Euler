@@ -1,11 +1,13 @@
 #include <iostream>
 
-int problem002()
+auto problem002() -> int
 {
+    constexpr auto max_value = 4000000;
+
     auto sum = 0;
     auto current = 1;
     auto next = 2;
-    while (current < 4000000)
+    while (current < max_value)
     {
         if (current % 2 == 0)
         {
